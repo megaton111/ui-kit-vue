@@ -1,0 +1,8 @@
+@import "common.scss"; // 공통
+@import "mixins.scss"; // 믹스인
+@import "variables.scss"; // 변수
+
+@import "layouts/layout.scss"; // 전체 레이아웃
+@import "components/header.scss";
+@import "components/button.scss";
+@import "components/input.scss";

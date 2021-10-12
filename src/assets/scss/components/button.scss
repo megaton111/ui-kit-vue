@@ -1,0 +1,77 @@
+// https://semantic-ui.com/elements/button.html
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.571428571em 0.71428571428em;
+  font-size: 1rem;
+  border: 0;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  border-radius: 0.28571429rem;
+  background-color: #e0e1e2;
+  user-select: none;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease,
+    box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+
+  i.icon {
+    font-size: 1em;
+    margin-right: 0.428571429em;
+  }
+
+  &:hover {
+    background-color: #cacbcd;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  // Color
+  &.primary {
+    background-color: $clr-primary;
+    color: #fff;
+  }
+
+  &.positive {
+    background-color: $clr-positive;
+    color: #fff;
+  }
+
+  &.negative {
+    background-color: $clr-negative;
+    color: #fff;
+  }
+
+  // Line Design
+  &.basic {
+    border: 1px solid #e0e1e2;
+    background-color: #fff;
+
+    &.primary {
+      border-color: $clr-primary;
+      color: $clr-primary;
+    }
+    &.positive {
+      border-color: $clr-positive;
+      color: $clr-positive;
+    }
+    &.negative {
+      border-color: $clr-negative;
+      color: $clr-negative;
+    }
+  }
+
+  // Size
+  &.xsm {
+    font-size: 0.85714286rem;
+  }
+  &.sm {
+    font-size: 0.92857143rem;
+  }
+  &.md {
+  }
+  &.lg {
+    font-size: 1.14285714rem;
+  }
+  &.xlg {
+    font-size: 1.28571429rem;
+  }
+}

@@ -1,0 +1,39 @@
+.input {
+  display: inline-flex;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 400;
+  input {
+    flex: 1 0 auto;
+    color: $clr-default;
+    padding: 0.67857143em 1em;
+    border: 1px solid #e0e1e2;
+    border-radius: 0.285714286em;
+    outline: 0;
+    &:focus {
+      border: 1px solid $clr-primary;
+      &::-webkit-input-placeholder {
+        color: rgb(161, 161, 161);
+      }
+
+      &::-moz-placeholder {
+        color: rgb(161, 161, 161);
+      }
+
+      &:-ms-input-placeholder {
+        color: rgb(161, 161, 161);
+      }
+    }
+  }
+  input::-webkit-input-placeholder {
+    color: rgba(191, 191, 191, 0.87);
+  }
+
+  input::-moz-placeholder {
+    color: rgba(191, 191, 191, 0.87);
+  }
+
+  input:-ms-input-placeholder {
+    color: rgba(191, 191, 191, 0.87);
+  }
+}
