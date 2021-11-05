@@ -1,13 +1,9 @@
 <template>
   <div id="app" class="app">
     <!-- <Header /> -->
-    <div class="app-lnb">
-      <router-link to="/button">Button</router-link>
-      <router-link to="/input">Input</router-link>
-      <router-link to="/sub">sub</router-link>
-    </div>
+    <Sidebar />
     <div class="app-container">
-      <router-view></router-view>
+      <router-view class="app-content"></router-view>
     </div>
     <!-- <Footer /> -->
   </div>
@@ -15,13 +11,14 @@
 
 <script>
 // import Header from './components/Header.vue'
-// import Footer from './components/Footer.vue'
+import Sidebar from './components/layout/Sidebar.vue'
 
 // https://simple-code-editor.vicuxd.com/
 
 export default {
   name: 'App',
   components: {
+    Sidebar
     // Header, Footer
   }
 }

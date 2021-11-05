@@ -1,0 +1,190 @@
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0 !important;
+    outline: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + label:after {
+      display: inline-flex;
+    }
+  }
+
+  label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-size: 1em;
+    &:before {
+      content: "";
+      display: inline-flex;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.142857143em;
+      border: 1px solid #22242659;
+      border-radius: 0.214285714em;
+    }
+    &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJjaGVjayIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLWNoZWNrIGZhLXctMTYiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTczLjg5OCA0MzkuNDA0bC0xNjYuNC0xNjYuNGMtOS45OTctOS45OTctOS45OTctMjYuMjA2IDAtMzYuMjA0bDM2LjIwMy0zNi4yMDRjOS45OTctOS45OTggMjYuMjA3LTkuOTk4IDM2LjIwNCAwTDE5MiAzMTIuNjkgNDMyLjA5NSA3Mi41OTZjOS45OTctOS45OTcgMjYuMjA3LTkuOTk3IDM2LjIwNCAwbDM2LjIwMyAzNi4yMDRjOS45OTcgOS45OTcgOS45OTcgMjYuMjA2IDAgMzYuMjA0bC0yOTQuNCAyOTQuNDAxYy05Ljk5OCA5Ljk5Ny0yNi4yMDcgOS45OTctMzYuMjA0LS4wMDF6Ij48L3BhdGg+PC9zdmc+);
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.disabled {
+    opacity: 0.4;
+    label {
+      &:before {
+        background-color: #e0e1e2;
+      }
+    }
+  }
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0 !important;
+    outline: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+  label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    user-select: none;
+    cursor: pointer;
+    &:before,
+    &:after {
+      content: "";
+      display: inline-flex;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+    &:before {
+      border: 1px solid #d4d4d5;
+      background-color: #fff;
+    }
+    &:after {
+      opacity: 0;
+      background-color: #333;
+      transform: scale(0.5);
+      transition: opacity 0.3s;
+    }
+  }
+  &.disabled {
+    opacity: 0.4 ;
+  }
+}
+
+.toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0 !important;
+    outline: 0;
+    width: 0;
+    height: 0;
+  }
+  label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-size: 1em;
+    &:before {
+      content: "";
+      display: inline-flex;
+      width: 50px;
+      transition: all 0.4s ease;
+    }
+    &:after {
+      content: "";
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      background: #fff linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+      -webkit-box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15),
+        0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+      box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15),
+        0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &.type-1 {
+    label {
+      &:before {
+        height: 3px;
+        background-color: rgba(0, 0, 0, 0.15);
+        border: 0;
+        border-radius: 0;
+      }
+    }
+  }
+
+  &.type-switch {
+    label {
+      &:before {
+        height: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.15);
+        border: 0;
+      }
+    }
+  }
+
+  input:checked {
+    & + label:after {
+      transform: translate(calc(50px - 20px), -50%);
+    }
+    & + label::before {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &.disabled {
+    opacity: 0.4 ;
+  }
+}

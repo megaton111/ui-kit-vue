@@ -6,18 +6,32 @@ body {
 .app {
   display: flex;
   height: 100%;
-  border: 1px solid #000;
   .app-lnb {
     display: flex;
     flex-direction: column;
     flex: 0 0 200px;
     padding: 50px 10px;
-    border: 1px solid red;
+    border-right: 1px solid #333;
+
+    a {
+      color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      padding: 5px 0;
+      font-size: 1.14285714em;
+      transition: all 0.3s;
+      &.router-link-active {
+        color: rgba(0, 0, 0, 1);
+      }
+    }
   }
   .app-container {
     display: flex;
     flex: 1;
     padding: 50px 10px;
+
+    .app-content {
+      width: 100%;
+    }
     h1 {
       margin-bottom: 20px;
       font-size: 1.2rem;
@@ -29,6 +43,7 @@ body {
         margin-bottom: 8px;
         h2 {
           font-size: 0.857142857rem;
+          letter-spacing: 0;
         }
       }
       .body {
